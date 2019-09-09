@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      >
+    <head>
+        <style>
+            h1{
+                color: black;
+                font-family: sans-serif;
+                position: relative;
+                left: 450px;
+                top: 100px;
+            }
+            
+            h3{
+                
+                position: relative;
+                left: 450px;
+                top: 100px;
+            }
+            
+            h2{
+                
+                 position: relative;
+                left: 450px;
+                top: 100px;
+            }
+            
+
+
+        </style>
+        <title>Welcome to DataSystem</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    
+    <body style="background-image : url(resources/images/register.jpg);background-repeat : repeat-y; background-position: center; background-attachment: fixed;">
+
+        <h1>
+            Hi Welcome !
+        </h1>
+        
+      
+        <h:form >
+        <h3>
+        <h:outputLabel value="ID        " />  
+        <h:inputText value="#{logIn.id}" style="position: relative ; left: 60px"/><br/><br/>
+            <h:outputLabel value="PassWord  "/>  
+            <h:inputText value="#{logIn.password}"/><br/>  
+        </h3>
+            
+    
+    
+        
+        <h2>
+            <h:commandButton value="Log In" action="#{logIn.log}"/>
+            <h:commandButton value="Register" action="register.xhtml" style="position: relative; left: 80px"/>
+        </h2>
+        </h:form>
+    </body>
+</html>

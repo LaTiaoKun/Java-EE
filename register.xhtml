@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      >
+    <head>
+        <title>register</title>
+        <style>
+            .bg{
+                 background-image:url(/DataSystem/images/backgif1.gif)               
+            }
+form{padding:20px 0;position:relative;z-index:2}
+form input{-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:0;border:1px solid rgba(255,255,255,.4);background-color:rgba(255,255,255,.2);width:200px;border-radius:3px;padding:8px 15px;margin:0 auto 10px;display:block;text-align:center;font-size:15px;color:#fff;-webkit-transition-duration:.25s;transition-duration:.25s;font-weight:300}
+form input:hover{background-color:rgba(255,255,255,.4)}
+form input:focus{background-color:#fff;width:230px;color:#333}
+form button{-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:0;background-color:#fff;border:0;padding:10px 15px;color:#333;border-radius:3px;width:200px;cursor:pointer;font-family:microsoft yahei,Arial,sans-serif;font-size:16px;font-weight:700;-webkit-transition-duration:.25s;transition-duration:.25s}
+form button:hover{background-color:#f5f7f9}
+        </style>
+    
+    </head>
+    
+    <body  class="bg">
+        <center><img src="/DataSystem/images/G14.png"  alt="logo" width="360" height ="158"/></center>
+        <center><div style="font-size:50px ;color:#99ffff">Welcome to join us!</div></center> 
+    
+        <h:form>
+           <center> <em style="font-size:20px ;color:#99ffff"> ID</em ></center>
+       <p></p>
+       <center> <h:inputText   value="#{information.id}"/></center>
+       <center><em style="font-size:20px ;color:#99ffff"> UserName <h:inputText value="#{information.userName}" /></em ></center>
+       <p></p>
+       <center><em style="font-size:20px ;color:#99ffff"> Password <h:inputText value="#{information.passWord}" /></em ></center>
+       <p></p>
+       <center><em style="font-size:20px ;color:#99ffff"> Permission <h:inputText value="#{information.permission}"/></em ></center>
+       <p></p>
+  
+             <h:commandButton value="Register Now!" action="#{information.sign}"  />
+             <center><button style ="color:#33ffff" onclick="openUrl1();">Back</button></center>
+                        <script type="text/javascript">
+                         function openUrl1() {
+                         
+                            var url1 = 'http://localhost:8080/DataSystem/';
+                            window.open(url1); 
+                           }
+                          </script> 
+         </h:form>
+    </body>
+</html>

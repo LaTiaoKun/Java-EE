@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      >
+    <head>
+
+   <link rel="stylesheet" type="text/css" href="css/style.css"/>
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/vector.js"></script>
+        <title>Welcome to DataSystem</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    
+    <body>
+
+  <div id="container">
+	<div id="output">
+		<div class="containerT">
+                  <img src="/DataSystem/images/G14.png"  alt="logo" width="360" height ="158"/>
+                    <center><h1 style="color:buttonface;">Hello,Adminstor!</h1></center>
+			<h:form class="form" id="entry_form">
+        
+               <center><h1 style="color:aqua;">ID</h1></center>
+        <h:inputText value="#{logIn.id}" style="position: relative ;"/>
+             <center><h1 style="color:aqua;">PassWord</h1></center>
+            <h:inputText value="#{logIn.password}"/>
+      
+            <h:commandButton value="Log In" action="#{logIn.log}"/>
+            <h:commandButton value="Register Now!" action="register.xhtml" />
+        </h:form>
+                </div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        Victor("container", "output");   //登录背景函数
+        $("#entry_name").focus();
+        $(document).keydown(function(event){
+            if(event.keyCode==13){
+                $("#entry_btn").click();
+            }
+        });
+    });
+</script>
+<div style="text-align:center;">
+
+</div>
+    </body>
+</html>

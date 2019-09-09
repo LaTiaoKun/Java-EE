@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+          <style>
+         ul
+        {
+        list-style-type:none;
+        margin:10px;
+        padding:5px;
+        overflow:hidden;
+        }
+        li
+        {
+        float:left;
+        }
+        a:link,a:visited
+        {
+        display:block;
+        width:100px;
+        font-weight:bold;
+        color:buttonhighlight;
+        background-color:#bebebe;
+        text-align:center;
+        padding:4px;
+        text-decoration:none;
+        text-transform:uppercase;
+        }
+        a:hover,a:active
+        {
+        background-color: powderblue;
+        }
+        </style>
+        <title>Add Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body style="background-image: url(/DataSystem/images/sea.jpg)">
+          <ul >
+                 <li><a href="welcome.xhtml">   HOME    </a></li>
+                 <li><a href="UserInfo.xhtml">Information</a></li>
+                    <li><a href=""> Management </a></li>
+                     <li><a href="ItemShow.xhtml"> Show </a></li>
+                    <li><a href="">   Member   </a></li>
+                    <li><a href="">    Admin    </a></li>
+                    <li><a href="about.xhtml">    About   </a></li>
+                    <li><a href="logIn.xhtml">    Exit    </a></li>
+                </ul>
+        <div>
+            <div style="color: black;  font-size: 30px;"> Add your item informations below!</div>
+            <h:form>
+            <h:outputLabel value="Item Name      " />  
+            <h:inputText value="#{addItem.itemName}" style="position: relative; left: 50px"/><br/><br/>
+             <h:outputLabel value="Item Id       " />  
+             <h:inputText value="#{addItem.itemId}" style="position: relative; left: 50px"/><br/><br/>
+             <h:outputLabel value="Guide Teacher " />  
+             <h:inputText value="#{addItem.teacher}" style="position: relative; left: 50px"/><br/><br/>
+             <h:outputLabel value="Item Leader   " />  
+             <h:inputText value="#{addItem.leader}" style="position: relative; left: 50px"/><br/><br/>
+             <h:outputLabel value="Describe      " />  
+             <h:inputText value="#{addItem.desc}" style="position: relative; left: 50px"/><br/><br/>
+            </h:form>
+          </div>  
+    
+             <h:form style=" position: relative;
+                     left:500px;
+                     top: 0px;">
+                 <div> Input your Group Member </div>
+                 <h:inputText value="#{addItem.group[0]}" style="position: relative; left: 50px"/><br/><br/>
+                 <h:inputText value="#{addItem.group[1]}" style="position: relative; left: 50px"/><br/><br/>
+                 <h:inputText value="#{addItem.group[2]}" style="position: relative; left: 50px"/><br/><br/>
+                 <h:inputText value="#{addItem.group[3]}" style="position: relative; left: 50px"/><br/><br/>
+                 <h:inputText value="#{addItem.group[4]}" style="position: relative; left: 50px"/><br/><br/>
+                 <h:commandButton value="Add" action="#{addItem.add}"/>
+             </h:form>
+        
+        
+       
+    </body>
+</html>

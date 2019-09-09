@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        
+           <link rel="stylesheet" type="text/css" href="style.css"/>
+   <script type="text/javascript" src="jquery.min.js"></script>
+   <script type="text/javascript" src="vector.js"></script>
+        <style>
+         ul
+        {
+        list-style-type:none;
+        margin:10px;
+        padding:5px;
+        overflow:hidden;
+        }
+        li
+        {
+        float:left;
+        }
+        a:link,a:visited
+        {
+        display:block;
+        width:100px;
+        font-weight:bold;
+        color:buttonhighlight;
+        background-color:#bebebe;
+        text-align:center;
+        padding:4px;
+        text-decoration:none;
+        text-transform:uppercase;
+        }
+        a:hover,a:active
+        {
+        background-color: powderblue;
+        }
+        </style>
+        <title>User Information</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body style="background-image: url(/DataSystem/images/logInb.jpg)">
+             <ul >
+                 <li><a href="welcome.xhtml">   HOME    </a></li>
+                 <li><a href="UserInfo.xhtml">Information</a></li>
+                    <li><a href=""> Management </a></li>
+                    <li><a href="ItemShow.xhtml"> Show </a></li>
+                    <li><a href="">   Member   </a></li>
+                    <li><a href="">    Admin    </a></li>
+                    <li><a href="about.xhtml">    About   </a></li>
+                    <li><a href="logIn.xhtml">    Exit    </a></li>
+                </ul>
+      
+        <a style="font-size: 20px;
+           color: black;
+           position: relative;
+                left:140px;
+                top: 10px;">
+            
+              <div style=" background-color: white;
+             width: 760px;
+             height: 500px;
+             border: 1px solid black;
+             filter:alpha(opacity=60);
+            /* CSS3 standard */
+                opacity:0.6;">
+                <h1 style="font-size: 30px;
+                     position: relative;
+                     left:280px">
+                    User Information
+                </h1>
+                <br/>
+                <div style="font-size: 20px;
+                     position: relative;
+                     left: 200px">
+                User Id #{showInfo.id}<br/><br/>
+                UserName #{showInfo.userName}<br/><br/>
+                Permission #{showInfo.isPermit}<br/><br/>
+                status #{showInfo.status}<br/><br/>
+                IpAddress #{showInfo.ipAddress}<br/><br/>
+                </div>
+              </div>
+        </a>
+    </body>
+     
+</html>
